@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-monte-carlo"  [ D:\FACULTATE\Proiect Cad\Suciu_Sorina_Simina_2124\suciu_sorina_simina_2124-pspicefiles\schematic1\monte-carlo.sim ] 
+
+** Creating circuit file "monte-carlo.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../suciu_sorina_simina_2124-pspicefiles/ledrosu.lib" 
+* From [PSPICE NETLIST] section of C:\Users\suciu\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC PARAM r LIST 9400 9401 9402 9410 9415 9450 9490 
+.MC 10 DC v([OUT]) YMAX OUTPUT ALL SEED=200 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

@@ -1,0 +1,434 @@
+
+**** 04/19/24 13:36:56 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\programe\cadence\laburi_teme_shit\suciu_sorina_simina_2124-pspicefiles\schematic1\rcresc.sim ]
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "rCresc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Programe\Cadence\Working Shit\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 94k 330k 2360 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SUCIU_SORINA_SIMINA_2124
+R_R1         VREF1 N51335 R_R1 1.6k TC=0,0 
+.model        R_R1 RES R=1 DEV=0.5% TC1=0 TC2=0
+X_U4         N53299 VREF1 VCC 0 VREF1 LM741
+X_U2         N51703 N51335 VCC 0 N51341 LM741
+R_R4         0 N51703 R_R4 4.3k TC=0,0 
+.model        R_R4 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R7         N54774 OUT R_R7 12k TC=0,0 
+.model        R_R7 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R2         N51335 N51341 R_R2 4.3k TC=0,0 
+.model        R_R2 RES R=1 DEV=0.5% TC1=0 TC2=0
+Q_Q6         N513670 N51629 0 BC107A 
+R_R3         N51695 N51703 R_R3 1.6k TC=0,0 
+.model        R_R3 RES R=1 DEV=0.5% TC1=0 TC2=0
+X_U5         N53446 VREF2 VCC 0 VREF2 LM741
+R_R5         N51379 0  220k TC=0,0 
+R_Rs         VCC N51379  {r} TC=0,0 
+X_U1         N51379 N51695 VCC 0 N51695 LM741
+R_R9         VCC N513670  2945 TC=0,0 
+X_U3         N54774 N51341 VCC 0 OUT LM741
+R_R6         N54774 VREF2 R_R6 10k TC=0,0 
+.model        R_R6 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R8         0 N51629 R_R8 120k TC=0,0 
+.model        R_R8 RES R=1 DEV=0.5% TC1=0 TC2=0
+V_V1         VCC 0 11V
+R_R17         N53299 VCC  20k TC=0,0 
+R_R18         0 N53299  13k TC=0,0 
+R_R20         0 N53446  500 TC=0,0 
+R_R19         N53446 VCC  10.5k TC=0,0 
+.PARAM  r=330k
+
+**** RESUMING rCresc.cir ****
+.END
+
+**** 04/19/24 13:36:56 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\programe\cadence\laburi_teme_shit\suciu_sorina_simina_2124-pspicefiles\schematic1\rcresc.sim ]
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4.x_lm741.dx X_U4.x_lm741.dy X_U2.x_lm741.dx X_U2.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U5.x_lm741.dx X_U5.x_lm741.dy X_U1.x_lm741.dx X_U1.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U3.x_lm741.dx X_U3.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 04/19/24 13:36:56 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\programe\cadence\laburi_teme_shit\suciu_sorina_simina_2124-pspicefiles\schematic1\rcresc.sim ]
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC107A          X_U4.x_lm741.qx X_U2.x_lm741.qx X_U5.x_lm741.qx 
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS    7.049000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  375.5            93.75           93.75           93.75         
+          NF    1               1               1               1            
+         VAF  116.3                                                          
+         IKF    4.589                                                        
+         ISE    7.049000E-15                                                 
+          NE    1.281                                                        
+          BR    2.611           1               1               1            
+          NR    1               1               1               1            
+         IKR    5.313                                                        
+         ISC  121.700000E-12                                                 
+          NC    1.865                                                        
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    1.464           0               0               0            
+         CJE   11.500000E-12    0               0               0            
+         VJE     .5              .75             .75             .75         
+         MJE     .2717                                                       
+         CJC    5.380000E-12    0               0               0            
+         VJC     .6218           .75             .75             .75         
+         MJC     .329            .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  451.000000E-12                                                 
+         XTF   17.43                                                         
+         VTF   10                                                            
+         ITF    6.194                                                        
+          TR   10.000000E-09                                                 
+         XTB    1.5                                                          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U1.x_lm741.qx X_U3.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 04/19/24 13:36:56 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\programe\cadence\laburi_teme_shit\suciu_sorina_simina_2124-pspicefiles\schematic1\rcresc.sim ]
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R4            R_R7            R_R2            
+           R    1               1               1               1            
+
+
+               R_R3            R_R6            R_R8            
+           R    1               1               1            
+
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+ERROR -- Convergence problem in DC sweep
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    0.0000  (  VCC)    0.0000  (VREF1)    0.0000  (VREF2)    0.0000      
+
+(N51335)    0.0000 (N51341)    0.0000 (N51379)    0.0000 (N51629)    0.0000     
+
+(N51695)    0.0000 (N51703)    0.0000 (N53299)    0.0000 (N53446)    0.0000     
+
+(N54774)    0.0000 (N513670)    0.0000                                          
+
+(X_U1.x_lm741.6)    0.0000            (X_U1.x_lm741.7)    0.0000                
+
+(X_U1.x_lm741.8)    0.0000            (X_U1.x_lm741.9)    0.0000                
+
+(X_U2.x_lm741.6)    0.0000            (X_U2.x_lm741.7)    0.0000                
+
+(X_U2.x_lm741.8)    0.0000            (X_U2.x_lm741.9)    0.0000                
+
+(X_U3.x_lm741.6)    0.0000            (X_U3.x_lm741.7)    0.0000                
+
+(X_U3.x_lm741.8)    0.0000            (X_U3.x_lm741.9)    0.0000                
+
+(X_U4.x_lm741.6)    0.0000            (X_U4.x_lm741.7)    0.0000                
+
+(X_U4.x_lm741.8)    0.0000            (X_U4.x_lm741.9)    0.0000                
+
+(X_U5.x_lm741.6)    0.0000            (X_U5.x_lm741.7)    0.0000                
+
+(X_U5.x_lm741.8)    0.0000            (X_U5.x_lm741.9)    0.0000                
+
+(X_U1.x_lm741.10)    0.0000           (X_U1.x_lm741.11)    0.0000               
+
+(X_U1.x_lm741.12)    0.0000           (X_U1.x_lm741.13)    0.0000               
+
+(X_U1.x_lm741.14)    0.0000           (X_U1.x_lm741.53)    0.0000               
+
+(X_U1.x_lm741.54)    0.0000           (X_U1.x_lm741.90)    0.0000               
+
+(X_U1.x_lm741.91)    0.0000           (X_U1.x_lm741.92)    0.0000               
+
+(X_U1.x_lm741.99)    0.0000           (X_U2.x_lm741.10)    0.0000               
+
+(X_U2.x_lm741.11)    0.0000           (X_U2.x_lm741.12)    0.0000               
+
+(X_U2.x_lm741.13)    0.0000           (X_U2.x_lm741.14)    0.0000               
+
+(X_U2.x_lm741.53)    0.0000           (X_U2.x_lm741.54)    0.0000               
+
+(X_U2.x_lm741.90)    0.0000           (X_U2.x_lm741.91)    0.0000               
+
+(X_U2.x_lm741.92)    0.0000           (X_U2.x_lm741.99)    0.0000               
+
+(X_U3.x_lm741.10)    0.0000           (X_U3.x_lm741.11)    0.0000               
+
+(X_U3.x_lm741.12)    0.0000           (X_U3.x_lm741.13)    0.0000               
+
+(X_U3.x_lm741.14)    0.0000           (X_U3.x_lm741.53)    0.0000               
+
+(X_U3.x_lm741.54)    0.0000           (X_U3.x_lm741.90)    0.0000               
+
+(X_U3.x_lm741.91)    0.0000           (X_U3.x_lm741.92)    0.0000               
+
+(X_U3.x_lm741.99)    0.0000           (X_U4.x_lm741.10)    0.0000               
+
+(X_U4.x_lm741.11)    0.0000           (X_U4.x_lm741.12)    0.0000               
+
+(X_U4.x_lm741.13)    0.0000           (X_U4.x_lm741.14)    0.0000               
+
+(X_U4.x_lm741.53)    0.0000           (X_U4.x_lm741.54)    0.0000               
+
+(X_U4.x_lm741.90)    0.0000           (X_U4.x_lm741.91)    0.0000               
+
+(X_U4.x_lm741.92)    0.0000           (X_U4.x_lm741.99)    0.0000               
+
+(X_U5.x_lm741.10)    0.0000           (X_U5.x_lm741.11)    0.0000               
+
+(X_U5.x_lm741.12)    0.0000           (X_U5.x_lm741.13)    0.0000               
+
+(X_U5.x_lm741.14)    0.0000           (X_U5.x_lm741.53)    0.0000               
+
+(X_U5.x_lm741.54)    0.0000           (X_U5.x_lm741.90)    0.0000               
+
+(X_U5.x_lm741.91)    0.0000           (X_U5.x_lm741.92)    0.0000               
+
+(X_U5.x_lm741.99)    0.0000           
+
+
+  These voltages failed to converge:
+
+    V(VREF1)                  =    412.38V  \         0V
+    V(N51335)                 =    412.35V  \         0V
+    V(N51703)                 =    298.08V  \         0V
+    V(N54774)                 =    412.32V  \         0V
+    V(OUT)                    =    412.24V  \         0V
+    V(N51341)                 =    412.28V  \         0V
+    V(N513670)                =     10.86V  \         0V
+    V(N51629)                 =     2.357V  \         0V
+    V(N51695)                 =    408.99V  \         0V
+    V(N51379)                 =     4.477V  \         0V
+    V(VCC)                    =     11.00V  \         0V
+    V(VREF2)                  =    412.38V  \         0V
+    V(N53299)                 =     4.333V  \         0V
+    V(N53446)                 =   500.00mV  \         0V
+    V(X_U4.x_lm741.11)        =     11.00V  \         0V
+    V(X_U4.x_lm741.12)        =     11.00V  \         0V
+    V(X_U4.x_lm741.6)         =  -119.23mV  \         0V
+    V(X_U4.x_lm741.7)         =    412.81V  \         0V
+    V(X_U4.x_lm741.53)        =     10.00V  \         0V
+    V(X_U4.x_lm741.54)        =     1.000V  \         0V
+    V(X_U4.x_lm741.90)        =     8.586V  \         0V
+    V(X_U4.x_lm741.91)        =     40.00V  \         0V
+    V(X_U4.x_lm741.92)        =    -40.00V  \         0V
+    V(X_U4.x_lm741.99)        =     5.500V  \         0V
+    V(X_U4.x_lm741.10)        =   -194.45V  \         0V
+    V(X_U4.x_lm741.13)        =   -194.45V  \         0V
+    V(X_U4.x_lm741.14)        =   -194.45V  \         0V
+    V(X_U4.x_lm741.8)         =    412.81V  \         0V
+    V(X_U2.x_lm741.11)        =     11.00V  \         0V
+    V(X_U2.x_lm741.12)        =     11.00V  \         0V
+    V(X_U2.x_lm741.6)         =  -119.20mV  \         0V
+    V(X_U2.x_lm741.7)         =    412.71V  \         0V
+    V(X_U2.x_lm741.53)        =     10.00V  \         0V
+    V(X_U2.x_lm741.54)        =     1.000V  \         0V
+    V(X_U2.x_lm741.90)        =     8.549V  \         0V
+    V(X_U2.x_lm741.91)        =     40.00V  \         0V
+    V(X_U2.x_lm741.92)        =    -40.00V  \         0V
+    V(X_U2.x_lm741.99)        =     5.500V  \         0V
+    V(X_U2.x_lm741.10)        =   -194.45V  \         0V
+    V(X_U2.x_lm741.13)        =   -194.45V  \         0V
+    V(X_U2.x_lm741.14)        =   -194.45V  \         0V
+    V(X_U2.x_lm741.8)         =    412.71V  \         0V
+    V(X_U5.x_lm741.11)        =     11.00V  \         0V
+    V(X_U5.x_lm741.12)        =     11.00V  \         0V
+    V(X_U5.x_lm741.6)         =  -119.23mV  \         0V
+    V(X_U5.x_lm741.7)         =    412.81V  \         0V
+    V(X_U5.x_lm741.53)        =     10.00V  \         0V
+    V(X_U5.x_lm741.54)        =     1.000V  \         0V
+    V(X_U5.x_lm741.90)        =     8.575V  \         0V
+    V(X_U5.x_lm741.91)        =     40.00V  \         0V
+    V(X_U5.x_lm741.92)        =    -40.00V  \         0V
+    V(X_U5.x_lm741.99)        =     5.500V  \         0V
+    V(X_U5.x_lm741.10)        =   -194.45V  \         0V
+    V(X_U5.x_lm741.13)        =   -194.45V  \         0V
+    V(X_U5.x_lm741.14)        =   -194.45V  \         0V
+    V(X_U5.x_lm741.8)         =    412.81V  \         0V
+    V(X_U1.x_lm741.11)        =     11.00V  \         0V
+    V(X_U1.x_lm741.12)        =     11.00V  \         0V
+    V(X_U1.x_lm741.6)         =  -119.23mV  \         0V
+    V(X_U1.x_lm741.7)         =    412.88V  \         0V
+    V(X_U1.x_lm741.53)        =     10.00V  \         0V
+    V(X_U1.x_lm741.54)        =     1.000V  \         0V
+    V(X_U1.x_lm741.90)        =     77.82V  \         0V
+    V(X_U1.x_lm741.91)        =     40.00V  \         0V
+    V(X_U1.x_lm741.92)        =    -40.00V  \         0V
+    V(X_U1.x_lm741.99)        =     5.500V  \         0V
+    V(X_U1.x_lm741.10)        =   -194.45V  \         0V
+    V(X_U1.x_lm741.13)        =   -194.45V  \         0V
+    V(X_U1.x_lm741.14)        =   -194.45V  \         0V
+    V(X_U1.x_lm741.8)         =    412.88V  \         0V
+    V(X_U3.x_lm741.11)        =     11.00V  \         0V
+    V(X_U3.x_lm741.12)        =     11.00V  \         0V
+    V(X_U3.x_lm741.6)         =  -119.19mV  \         0V
+    V(X_U3.x_lm741.7)         =    412.67V  \         0V
+    V(X_U3.x_lm741.53)        =     10.00V  \         0V
+    V(X_U3.x_lm741.54)        =     1.000V  \         0V
+    V(X_U3.x_lm741.90)        =     8.559V  \         0V
+    V(X_U3.x_lm741.91)        =     40.00V  \         0V
+    V(X_U3.x_lm741.92)        =    -40.00V  \         0V
+    V(X_U3.x_lm741.99)        =     5.500V  \         0V
+    V(X_U3.x_lm741.10)        =   -194.45V  \         0V
+    V(X_U3.x_lm741.13)        =   -194.45V  \         0V
+    V(X_U3.x_lm741.14)        =   -194.45V  \         0V
+    V(X_U3.x_lm741.8)         =    412.67V  \         0V
+
+  These supply currents failed to converge:
+
+    I(X_U4.x_lm741.egnd)      =   -8.601mA  \         0A
+    I(X_U2.x_lm741.egnd)      =   -8.565mA  \         0A
+    I(X_U5.x_lm741.egnd)      =   -8.591mA  \         0A
+    I(X_U1.x_lm741.egnd)      =   -77.83mA  \         0A
+    I(X_U3.x_lm741.egnd)      =   -8.574mA  \         0A
+    I(V_V1)                   =    16.72mA  \         0A
+    I(X_U4.x_lm741.vb)        =   -1.192uA  \         0A
+    I(X_U4.x_lm741.vc)        =   -4.237mA  \         0A
+    I(X_U4.x_lm741.ve)        =    4.332mA  \         0A
+    I(X_U4.x_lm741.vlim)      =    8.586mA  \         0A
+    I(X_U4.x_lm741.vlp)       =   -32.39pA  \         0A
+    I(X_U4.x_lm741.vln)       =   -50.09pA  \         0A
+    I(X_U2.x_lm741.vb)        =   -1.192uA  \         0A
+    I(X_U2.x_lm741.vc)        =   -4.236mA  \         0A
+    I(X_U2.x_lm741.ve)        =    4.331mA  \         0A
+    I(X_U2.x_lm741.vlim)      =    8.549mA  \         0A
+    I(X_U2.x_lm741.vlp)       =   -32.42pA  \         0A
+    I(X_U2.x_lm741.vln)       =   -50.05pA  \         0A
+    I(X_U5.x_lm741.vb)        =   -1.192uA  \         0A
+    I(X_U5.x_lm741.vc)        =   -4.237mA  \         0A
+    I(X_U5.x_lm741.ve)        =    4.332mA  \         0A
+    I(X_U5.x_lm741.vlim)      =    8.575mA  \         0A
+    I(X_U5.x_lm741.vlp)       =   -32.40pA  \         0A
+    I(X_U5.x_lm741.vln)       =   -50.08pA  \         0A
+    I(X_U1.x_lm741.vb)        =   -1.192uA  \         0A
+    I(X_U1.x_lm741.vc)        =   -4.201mA  \         0A
+    I(X_U1.x_lm741.ve)        =    4.296mA  \         0A
+    I(X_U1.x_lm741.vlim)      =    77.82mA  \         0A
+    I(X_U1.x_lm741.vlp)       =    38.99pA  \         0A
+    I(X_U1.x_lm741.vln)       =  -121.47pA  \         0A
+    I(X_U3.x_lm741.vb)        =   -1.192uA  \         0A
+    I(X_U3.x_lm741.vc)        =   -4.236mA  \         0A
+    I(X_U3.x_lm741.ve)        =    4.330mA  \         0A
+    I(X_U3.x_lm741.vlim)      =    8.559mA  \         0A
+    I(X_U3.x_lm741.vlp)       =   -32.41pA  \         0A
+    I(X_U3.x_lm741.vln)       =   -50.06pA  \         0A
+    I(X_U4.x_lm741.hlim)      =   -17.70pA  \         0A
+    I(X_U2.x_lm741.hlim)      =   -17.63pA  \         0A
+    I(X_U5.x_lm741.hlim)      =   -17.68pA  \         0A
+    I(X_U1.x_lm741.hlim)      =  -160.44pA  \         0A
+    I(X_U3.x_lm741.hlim)      =   -17.65pA  \         0A
+
+  These devices failed to converge:
+    X_U4.x_lm741.dc X_U4.x_lm741.de X_U4.x_lm741.dln X_U2.x_lm741.dc 
+    X_U2.x_lm741.de X_U2.x_lm741.dln X_U5.x_lm741.dc X_U5.x_lm741.de 
+    X_U5.x_lm741.dln X_U1.x_lm741.dc X_U1.x_lm741.de X_U1.x_lm741.dlp 
+    X_U1.x_lm741.dln X_U3.x_lm741.dc X_U3.x_lm741.de X_U3.x_lm741.dln 
+    X_U4.x_lm741.fb X_U2.x_lm741.fb X_U5.x_lm741.fb X_U1.x_lm741.fb 
+    X_U3.x_lm741.fb Q_Q6      X_U4.x_lm741.q1 X_U4.x_lm741.q2 X_U2.x_lm741.q1 
+    X_U2.x_lm741.q2 X_U5.x_lm741.q1 X_U5.x_lm741.q2 X_U1.x_lm741.q1 
+    X_U1.x_lm741.q2 X_U3.x_lm741.q1 X_U3.x_lm741.q2 
+
+**** Interrupt ****

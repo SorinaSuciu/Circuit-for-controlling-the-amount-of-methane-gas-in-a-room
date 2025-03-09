@@ -1,0 +1,46 @@
+* source SUCIU_SORINA_SIMINA_2124
+R_R1         VREF1 N51335 R_R1 10k TC=0,0 
+.model        R_R1 RES R=1 DEV=5% TC1=0 TC2=0
+X_U4         N58762 VREF1 VCC 0 VREF1 LM741
+X_U2         N51703 N51335 VCC 0 IN LM741
+R_R4         N517511 N51703 R_R4 22k TC=0,0 
+.model        R_R4 RES R=1 DEV=5% TC1=0 TC2=0
+R_R7         N54774 OUT R_R7 16k TC=0,0 
+.model        R_R7 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R2         N51335 N512710 R_R2 22k TC=0,0 
+.model        R_R2 RES R=1 DEV=5% TC1=0 TC2=0
+Q_Q6         N513670 N51629 0 BC107A 
+R_R3         N51695 N51703 R_R3 10k TC=0,0 
+.model        R_R3 RES R=1 DEV=5% TC1=0 TC2=0
+X_U5         N53446 VREF2 VCC 0 VREF2 LM741
+R_R5         N51379 0 R_R5 330k TC=0,0 
+.model        R_R5 RES R=1 DEV=5% TC1=0 TC2=0
+R_Rs         VCC N51379 R_Rs {r} TC=0,0 
+.model        R_Rs RES R=1 DEV=5% TC1=0 TC2=0
+X_U1         N51379 N51695 VCC 0 N51695 LM741
+R_R9         VCC N513670 R_R9 200 TC=0,0 
+.model        R_R9 RES R=1 DEV=5% TC1=0 TC2=0
+X_U3         N54774 IN VCC 0 OUT LM741
+R_R6         N54774 VREF2 R_R6 11k TC=0,0 
+.model        R_R6 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R8         OUT N51629 R_R8 5.6k TC=0,0 
+.model        R_R8 RES R=1 DEV=0.5% TC1=0 TC2=0
+V_V1         VCC 0 11V
+R_R18         N58762 VCC R_R18 47k TC=0,0 
+.model        R_R18 RES R=1 DEV=5% TC1=0 TC2=0
+R_R26         0 N58787 R_R26 1k TC=0,0 
+.model        R_R26 RES R=1 DEV=5% TC1=0 TC2=0
+R_R19         0 N53446 R_R19 33k TC=0,0 
+.model        R_R19 RES R=1 DEV=5% TC1=0 TC2=0
+R_R21         N53446 VCC R_R21 75k TC=0,0 
+.model        R_R21 RES R=1 DEV=5% TC1=0 TC2=0
+R_R22         N58312 OUT R_R22 220 TC=0,0 
+.model        R_R22 RES R=1 DEV=5% TC1=0 TC2=0
+D_D1          N58312 0 RedLED 
+R_R24         N512710 IN R_R24 820 TC=0,0 
+.model        R_R24 RES R=1 DEV=5% TC1=0 TC2=0
+R_R25         0 N517511 R_R25 820 TC=0,0 
+.model        R_R25 RES R=1 DEV=5% TC1=0 TC2=0
+R_R23         N58787 N58762 R_R23 33k TC=0,0 
+.model        R_R23 RES R=1 DEV=5% TC1=0 TC2=0
+.PARAM  r=330k

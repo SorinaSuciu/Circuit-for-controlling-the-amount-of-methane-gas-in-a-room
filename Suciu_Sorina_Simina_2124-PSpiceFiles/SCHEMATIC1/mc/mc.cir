@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-mc"  [ d:\facultate\proiect cad\suciu_sorina_simina_2124\suciu_sorina_simina_2124-PSpiceFiles\SCHEMATIC1\mc.sim ] 
+
+** Creating circuit file "mc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../suciu_sorina_simina_2124-pspicefiles/ledrosu.lib" 
+* From [PSPICE NETLIST] section of C:\Users\suciu\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 330k 94k 2360 
+.MC 100 DC v([OUT]) YMAX OUTPUT ALL 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

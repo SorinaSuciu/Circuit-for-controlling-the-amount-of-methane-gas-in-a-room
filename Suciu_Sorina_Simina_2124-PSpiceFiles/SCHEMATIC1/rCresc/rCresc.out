@@ -1,0 +1,249 @@
+
+**** 06/03/24 13:07:18 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\facultate\proiect cad\suciu_sorina_simina_2124\suciu_sorina_simina_2124-pspicefiles\schematic1
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "rCresc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../suciu_sorina_simina_2124-pspicefiles/ledrosu.lib" 
+* From [PSPICE NETLIST] section of C:\Users\suciu\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 94k 330k 2360 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SUCIU_SORINA_SIMINA_2124
+R_R1         VREF1 N51335 R_R1 10k TC=0,0 
+.model        R_R1 RES R=1 DEV=5% TC1=0 TC2=0
+X_U4         N58762 VREF1 VCC 0 VREF1 LM741
+X_U2         N51703 N51335 VCC 0 IN LM741
+R_R4         N517511 N51703 R_R4 22k TC=0,0 
+.model        R_R4 RES R=1 DEV=5% TC1=0 TC2=0
+R_R7         N54774 OUT R_R7 16k TC=0,0 
+.model        R_R7 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R2         N51335 N512710 R_R2 22k TC=0,0 
+.model        R_R2 RES R=1 DEV=5% TC1=0 TC2=0
+Q_Q6         N513670 N51629 0 BC107A 
+R_R3         N51695 N51703 R_R3 10k TC=0,0 
+.model        R_R3 RES R=1 DEV=5% TC1=0 TC2=0
+X_U5         N53446 VREF2 VCC 0 VREF2 LM741
+R_R5         N51379 0 R_R5 330k TC=0,0 
+.model        R_R5 RES R=1 DEV=5% TC1=0 TC2=0
+R_Rs         VCC N51379 R_Rs {r} TC=0,0 
+.model        R_Rs RES R=1 DEV=5% TC1=0 TC2=0
+X_U1         N51379 N51695 VCC 0 N51695 LM741
+R_R9         VCC N513670 R_R9 200 TC=0,0 
+.model        R_R9 RES R=1 DEV=5% TC1=0 TC2=0
+X_U3         N54774 IN VCC 0 OUT LM741
+R_R6         N54774 VREF2 R_R6 11k TC=0,0 
+.model        R_R6 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R8         OUT N51629 R_R8 5.6k TC=0,0 
+.model        R_R8 RES R=1 DEV=0.5% TC1=0 TC2=0
+V_V1         VCC 0 11V
+R_R18         N58762 VCC R_R18 47k TC=0,0 
+.model        R_R18 RES R=1 DEV=5% TC1=0 TC2=0
+R_R26         0 N58787 R_R26 1k TC=0,0 
+.model        R_R26 RES R=1 DEV=5% TC1=0 TC2=0
+R_R19         0 N53446 R_R19 33k TC=0,0 
+.model        R_R19 RES R=1 DEV=5% TC1=0 TC2=0
+R_R21         N53446 VCC R_R21 75k TC=0,0 
+.model        R_R21 RES R=1 DEV=5% TC1=0 TC2=0
+R_R22         N58312 OUT R_R22 220 TC=0,0 
+.model        R_R22 RES R=1 DEV=5% TC1=0 TC2=0
+D_D1          N58312 0 RedLED 
+R_R24         N512710 IN R_R24 820 TC=0,0 
+.model        R_R24 RES R=1 DEV=5% TC1=0 TC2=0
+R_R25         0 N517511 R_R25 820 TC=0,0 
+.model        R_R25 RES R=1 DEV=5% TC1=0 TC2=0
+R_R23         N58787 N58762 R_R23 33k TC=0,0 
+.model        R_R23 RES R=1 DEV=5% TC1=0 TC2=0
+.PARAM  r=330k
+
+**** RESUMING rCresc.cir ****
+.END
+
+**** 06/03/24 13:07:18 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\facultate\proiect cad\suciu_sorina_simina_2124\suciu_sorina_simina_2124-pspicefiles\schematic1
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               RedLED          X_U4.x_lm741.dx X_U4.x_lm741.dy X_U2.x_lm741.dx 
+          IS  939.330000E-12  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    5                                                            
+         ISR   10.010000E-21                                                 
+          NR    4.995                                                        
+          BV     .1                                                          
+         IBV  263.830000E-09                                                 
+          RS    1.9654          1               1.000000E-03    1            
+          TT    5.000000E-09                                                 
+         CJO    1.000000E-12                   10.000000E-12                 
+          VJ     .75                                                         
+           M     .3333                                                       
+
+
+               X_U2.x_lm741.dy X_U5.x_lm741.dx X_U5.x_lm741.dy X_U1.x_lm741.dx 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03    1            
+         CJO   10.000000E-12                   10.000000E-12                 
+
+
+               X_U1.x_lm741.dy X_U3.x_lm741.dx X_U3.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03 
+         CJO   10.000000E-12                   10.000000E-12 
+
+
+**** 06/03/24 13:07:18 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\facultate\proiect cad\suciu_sorina_simina_2124\suciu_sorina_simina_2124-pspicefiles\schematic1
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC107A          X_U4.x_lm741.qx X_U2.x_lm741.qx X_U5.x_lm741.qx 
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS    7.049000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  375.5            93.75           93.75           93.75         
+          NF    1               1               1               1            
+         VAF  116.3                                                          
+         IKF    4.589                                                        
+         ISE    7.049000E-15                                                 
+          NE    1.281                                                        
+          BR    2.611           1               1               1            
+          NR    1               1               1               1            
+         IKR    5.313                                                        
+         ISC  121.700000E-12                                                 
+          NC    1.865                                                        
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    1.464           0               0               0            
+         CJE   11.500000E-12    0               0               0            
+         VJE     .5              .75             .75             .75         
+         MJE     .2717                                                       
+         CJC    5.380000E-12    0               0               0            
+         VJC     .6218           .75             .75             .75         
+         MJC     .329            .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  451.000000E-12                                                 
+         XTF   17.43                                                         
+         VTF   10                                                            
+         ITF    6.194                                                        
+          TR   10.000000E-09                                                 
+         XTB    1.5                                                          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U1.x_lm741.qx X_U3.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 06/03/24 13:07:18 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\facultate\proiect cad\suciu_sorina_simina_2124\suciu_sorina_simina_2124-pspicefiles\schematic1
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R4            R_R7            R_R2            
+           R    1               1               1               1            
+
+
+               R_R3            R_R5            R_Rs            R_R9            
+           R    1               1               1               1            
+
+
+               R_R6            R_R8            R_R18           R_R26           
+           R    1               1               1               1            
+
+
+               R_R19           R_R21           R_R22           R_R24           
+           R    1               1               1               1            
+
+
+               R_R25           R_R23           
+           R    1               1            
+
+
+
+          JOB CONCLUDED
+
+**** 06/03/24 13:07:18 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rCresc"  [ d:\facultate\proiect cad\suciu_sorina_simina_2124\suciu_sorina_simina_2124-pspicefiles\schematic1
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .33
+

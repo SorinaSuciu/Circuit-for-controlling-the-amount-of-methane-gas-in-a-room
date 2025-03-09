@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-rCresc"  [ d:\facultate\proiect cad\suciu_sorina_simina_2124\suciu_sorina_simina_2124-pspicefiles\schematic1\rcresc.sim ] 
+
+** Creating circuit file "rCresc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../suciu_sorina_simina_2124-pspicefiles/ledrosu.lib" 
+* From [PSPICE NETLIST] section of C:\Users\suciu\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 94k 330k 2360 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
